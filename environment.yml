@@ -1,0 +1,35 @@
+name: p4ds-finalproject
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python==3.12.16
+
+  # Notebook interface and Python kernel
+  - jupyterlab==4.6.6
+  - notebook==7.6.5
+  - ipykernel==6.31.0
+
+  # Data exploration, reshaping, and time-series analysis
+  - numpy==2.2.6
+  - pandas==2.3.3
+
+  # Dataset downloads and file formats
+  - requests==2.34.2
+  - openpyxl==3.1.5      # Excel .xlsx
+  - xlrd==2.0.2          # Excel .xls
+  - pyarrow==21.0.0      # Parquet
+
+  # Statistical tests, bootstrap intervals, and visualization
+  - scipy==1.15.2
+  - matplotlib-base==3.10.9
+  - seaborn==0.13.2
+
+  # Pipelines, baselines, cross-validation, and model interpretation
+  - scikit-learn==1.7.2
+
+  - pip=23.3
+  - pip:
+    - jupyter-black  # Code formatting for notebooks
