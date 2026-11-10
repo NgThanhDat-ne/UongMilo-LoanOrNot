@@ -12,11 +12,11 @@
 
 ## Question Ownership
 
-| Question ID | Research Question | Owner | Type |Supporting Members |
-| --- | --- | --- | --- |
-| Q1 | TBD | TBD | TBD |
-| Q2 | TBD | TBD | TBD |
-| Q3 | TBD | TBD | TBD |
+| Question ID | Research Question | Owner | Type | Supporting Members |
+|---|---|---|---|---|
+| Q1 | TBD | TBD | TBD | TBD |
+| Q2 | TBD | TBD | TBD | TBD |
+| Q3 | TBD | TBD | TBD | TBD |
 
 ## Task Breakdown
 
