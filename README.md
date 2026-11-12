@@ -12,11 +12,11 @@
 
 ## Question Ownership
 
-| Question ID | Research Question | Owner | Type | Supporting Members |
-|---|---|---|---|---|
-| Q1 | TBD | TBD | TBD | TBD |
-| Q2 | TBD | TBD | TBD | TBD |
-| Q3 | TBD | TBD | TBD | TBD |
+| Question ID | Research Question | Owner | Type |
+|---|---|---|---|
+| Q1 | For loans disbursed in the same state, how does the charge-off rate differ between years of rising and falling unemployment after accounting for industry and loan term? | Vũ Duy Nhất | Non Machine Learning |
+| Q2 | At the time an SBA loan is approved, how accurately can a portfolio risk analyst estimate the gross principal that will be charged off within 36 months, and for which types of loans are the estimates least accurate? | Vũ Duy Nhất | Machine Learning |
+| Q3 | TBD | TBD | TBD |
 
 ## Task Breakdown
 
