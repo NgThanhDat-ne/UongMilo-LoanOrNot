@@ -22,13 +22,11 @@
 
 | Task | Description | Assignee | Deliverable | Status |
 | --- | --- | --- | --- | --- |
-| Data collection | Collect the dataset and document its source. | TBD | Raw dataset and source documentation | To do |
-| Data exploration and cleaning | Explore data quality and prepare the dataset for analysis. | TBD | Exploration notebook and cleaned dataset | To do |
+| Data collection | Collect the dataset and document its source. | Whole Team | Raw dataset and source documentation | Done |
+| Data exploration | Explore data quality and prepare the dataset for analysis. | Duy Nhất | Exploration notebook and cleaned dataset | To do |
 | Question analysis | Analyze the research questions and visualize findings. | TBD | Analysis notebook | To do |
 | Machine learning | Build and evaluate models for the machine learning question. | TBD | Modeling notebook and evaluation results | To do |
 | Documentation and review | Summarize findings and review project deliverables. | TBD | Completed README and final notebooks | To do |
-
-Replace `TBD` with the agreed research questions and member names, and update task statuses as work progresses.
 
 ## Dataset Description
 
