@@ -16,7 +16,8 @@
 |---|---|---|---|
 | Q1 | For loans disbursed in the same state, how does the charge-off rate differ between years of rising and falling unemployment after accounting for industry and loan term? | Vũ Duy Nhất | Non Machine Learning |
 | Q2 | At the time an SBA loan is approved, how accurately can a portfolio risk analyst estimate the gross principal that will be charged off within 36 months, and for which types of loans are the estimates least accurate? | Vũ Duy Nhất | Machine Learning |
-| Q3 | TBD | TBD | TBD |
+| Q3 | How does the difference in charge-off rates between franchise and independent loans compare for new versus existing businesses, and does this difference hold within approval periods, loan-size groups and industries? | Nguyễn Thành Đạt | Non Machine Learning |
+| Q4 | Does knowing how a franchise brand's earlier loans turned out help predict whether a new loan from that brand will be charged off, beyond the usual loan and borrower information? Which loans benefit the most? | Nguyễn Thành Đạt | Machine Learning |
 
 ## Task Breakdown
 
@@ -25,6 +26,8 @@
 | Data collection | Collect the dataset and document its source. | Whole Team | Raw dataset and source documentation | Done |
 | Data exploration | Explore data quality and prepare the dataset for analysis. | Duy Nhất | Exploration notebook and cleaned dataset | To do |
 | Question analysis | Analyze the research questions and visualize findings. | TBD | Analysis notebook | To do |
+| Q3 analysis | Compare charge-off rates of franchise and independent loans for new and existing businesses, controlling for approval period, loan size and industry. | Thành Đạt | [`02_analysis_2.ipynb`](notebooks/02_analysis_2.ipynb) | To do |
+| Q4 modeling | Build and compare models that predict whether a franchise loan will be charged off, with and without the brand's past default record, using a time-based split. | Thành Đạt | [`03_ml_question_2.ipynb`](notebooks/03_ml_question_2.ipynb) | To do |
 | Machine learning | Build and evaluate models for the machine learning question. | TBD | Modeling notebook and evaluation results | To do |
 | Documentation and review | Summarize findings and review project deliverables. | TBD | Completed README and final notebooks | To do |
 
@@ -71,7 +74,11 @@ Before modeling, the data require checks for missing values, inconsistent catego
 
 ### Related Public Notebooks
 
-The team noted approximately 40 related public notebooks on Kaggle. These have **not yet been surveyed**, and the count may change. They are available through the dataset's [public notebooks page](https://www.kaggle.com/datasets/mirbektoktogaraev/should-this-loan-be-approved-or-denied/code) for future comparison of cleaning approaches, exploratory analyses, and modeling methods. No notebook-specific findings are claimed here.
+The dataset's [public notebooks page](https://www.kaggle.com/datasets/mirbektoktogaraev/should-this-loan-be-approved-or-denied/code) lists about 40 notebooks. In November 2026 we searched the source code of the 35 notebooks that were publicly accessible for the columns and methods used by our questions. We scanned keywords and the related code sections; we did not read every notebook in full. The survey will be extended as the remaining questions are finalized.
+
+**Relation to Q3.** About 20 of these notebooks use `FranchiseCode` and `NewExist`, mostly by turning franchise status into a 0/1 feature for a classifier or by plotting the default rate of each variable separately, for example [Complete EDA + Model](https://www.kaggle.com/code/farrasalyafi/complete-eda-model), [Loan Machine Learning project](https://www.kaggle.com/code/sondosamromahmod/loan-machine-learning-project) and [#001 LGBM Baseline Model](https://www.kaggle.com/code/acchiko/001-lgbm-baseline-model), which drops `FranchiseCode`. We did not find a notebook that studies how franchise status and business age interact, compares them within approval periods, loan-size groups or industries, or reports confidence intervals or statistical tests for this difference. Q3 focuses on these points. Any preprocessing idea reused from a public notebook will be cited where it is used.
+
+**Relation to Q4.** We did not find a notebook that builds a franchise brand's default history from earlier loans or target-encodes `FranchiseCode`. Most notebooks split the data randomly with `train_test_split`, and several report 97–99% accuracy, for example [SBA LOAN APPROVAL 99%accuracy](https://www.kaggle.com/code/vaishnavkrishnap/sba-loan-approval-99-accuracy) and [Log regression(97%) and Neural network model (99%)](https://www.kaggle.com/code/fabiorods/log-regression-97-and-neural-network-model-99). The closest work is [Dataset Exploration](https://www.kaggle.com/code/islandemiaj/dataset-exploration), which uses an out-of-time holdout, but on a different SBA dataset (with `FranchiseName`, loans from 2009 onward) and with the brand encoded as an ordinary category. Q4 differs in three ways: it computes each brand's history using only loans and charge-offs known before the approval date, it splits training and test data by time, and it excludes outcome columns and uses metrics suited to imbalanced classes.
 
 ## Question List and Key Findings
 
