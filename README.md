@@ -18,6 +18,8 @@
 | Q2 | At the time an SBA loan is approved, how accurately can a portfolio risk analyst estimate the gross principal that will be charged off within 36 months, and for which types of loans are the estimates least accurate? | Vũ Duy Nhất | Machine Learning |
 | Q3 | How does the difference in charge-off rates between franchise and independent loans compare for new versus existing businesses, and does this difference hold within approval periods, loan-size groups and industries? | Nguyễn Thành Đạt | Non Machine Learning |
 | Q4 | Does knowing how a franchise brand's earlier loans turned out help predict whether a new loan from that brand will be charged off, beyond the usual loan and borrower information? Which loans benefit the most? | Nguyễn Thành Đạt | Machine Learning |
+| Q5 | Among loans approved in the same fiscal year and loan-size band, how does the SBA guarantee share differ between new and established businesses? | Trần Huỳnh Mạnh Đạt | Non Machine Learning |
+| Q6 | Using information available at SBA loan approval, how accurately can a lending operations team predict the number of days until recorded disbursement for loans approved in later years, and which loan groups have the largest prediction errors? | Trần Huỳnh Mạnh Đạt | Machine Learning
 
 ## Task Breakdown
 
